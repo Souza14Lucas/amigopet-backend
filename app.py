@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask, jsonify
 from dotenv import load_dotenv
 import os
@@ -27,18 +26,20 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://{user}:{password}
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY') 
 
 # NOVO: Adiciona a URL do Frontend Admin (Static Site) para permissão CORS
-# O Render precisa disso para aceitar requisições do seu painel Admin
+# Garantimos que, se a variável estiver vazia, ele use o curinga '*'.
 FRONTEND_ADMIN_URL = os.getenv('FRONTEND_ADMIN_URL', '*')
+FRONTEND_API_URL = os.getenv('RENDER_EXTERNAL_URL') # URL da própria API no Render (pode ser útil)
 
-# NOVO: Associa a instância do DB ao aplicativo
-print("DB URI:", app.config['SQLALCHEMY_DATABASE_URI'])
-db.init_app(app)
+# Lista de origens permitidas
+ALLOWED_ORIGINS = ["http://localhost:5000", "http://127.0.0.1:5000", FRONTEND_ADMIN_URL]
 
-# Configuração do CORS: Permite requisições de origens específicas
-CORS(app, resources={r"/api/*": {"origins": [FRONTEND_ADMIN_URL, "http://localhost:5000", "http://127.0.0.1:5000"]}})
+# Adiciona a URL do próprio Render (se estiver configurada)
+if FRONTEND_API_URL:
+    ALLOWED_ORIGINS.append(FRONTEND_API_URL)
+
 
 # Configuração do CORS: Permite requisições de origens específicas, MÉTODOS e HEADERS
 CORS(app, resources={r"/api/*": {
@@ -47,6 +48,10 @@ CORS(app, resources={r"/api/*": {
     "allow_headers": ["Authorization", "Content-Type"],   # Permite os headers de Token e JSON
     "supports_credentials": True
 }})
+
+# NOVO: Associa a instância do DB ao aplicativo
+print("DB URI:", app.config['SQLALCHEMY_DATABASE_URI'])
+db.init_app(app)
 
 # Registra os Blueprints
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
@@ -59,7 +64,7 @@ app.register_blueprint(pedidos_bp, url_prefix='/api/pedidos') # NOVO
 def index():
     """Rota de teste inicial."""
     return jsonify({
-        "message": "Servidor Amigo Pet (Python/Flask) rodando!",
+        "message": "Servidor Pet Amigo (Python/Flask) rodando!",
         "status": "online"
     }), 200
 
