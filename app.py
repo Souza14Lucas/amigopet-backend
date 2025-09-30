@@ -27,25 +27,31 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://{user}:{password}
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY') 
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+# NOVO: Adiciona a URL do Frontend Admin (Static Site) para permissão CORS
+# O Render precisa disso para aceitar requisições do seu painel Admin
+FRONTEND_ADMIN_URL = os.getenv('FRONTEND_ADMIN_URL', '*')
 
 # NOVO: Associa a instância do DB ao aplicativo
 print("DB URI:", app.config['SQLALCHEMY_DATABASE_URI'])
 db.init_app(app)
 
-CORS(app) 
+# Configuração do CORS: Permite requisições de origens específicas
+CORS(app, resources={r"/api/*": {"origins": [FRONTEND_ADMIN_URL, "http://localhost:5000", "http://127.0.0.1:5000"]}})
 
 # Registra os Blueprints
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(produtos_bp, url_prefix='/api/produtos')
 app.register_blueprint(pedidos_bp, url_prefix='/api/pedidos') # NOVO
 
+
 # 5. Rota de Teste (Exemplo de API)
 @app.route('/', methods=['GET'])
 def index():
     """Rota de teste inicial."""
     return jsonify({
-        "message": "Servidor Pet Amigo (Python/Flask) rodando!",
+        "message": "Servidor Amigo Pet (Python/Flask) rodando!",
         "status": "online"
     }), 200
 
