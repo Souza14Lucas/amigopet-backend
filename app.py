@@ -40,6 +40,14 @@ db.init_app(app)
 # Configuração do CORS: Permite requisições de origens específicas
 CORS(app, resources={r"/api/*": {"origins": [FRONTEND_ADMIN_URL, "http://localhost:5000", "http://127.0.0.1:5000"]}})
 
+# Configuração do CORS: Permite requisições de origens específicas, MÉTODOS e HEADERS
+CORS(app, resources={r"/api/*": {
+    "origins": ALLOWED_ORIGINS,
+    "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"], # Permite todos os métodos de CRUD
+    "allow_headers": ["Authorization", "Content-Type"],   # Permite os headers de Token e JSON
+    "supports_credentials": True
+}})
+
 # Registra os Blueprints
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(produtos_bp, url_prefix='/api/produtos')
