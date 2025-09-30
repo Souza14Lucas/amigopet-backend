@@ -67,6 +67,7 @@ def login_user():
 
     try:
         usuario = Usuario.query.filter_by(email=email).first()
+
         if not usuario or not check_password(senha, usuario.senha_hash):
             return jsonify({"error": "Email ou senha inválidos"}), 401
 
@@ -76,7 +77,8 @@ def login_user():
             "message": "Login realizado com sucesso!",
             "token": token,
             "user_id": usuario.id,
-            "user_type": usuario.tipo
+            "user_type": usuario.tipo,
+            "user_name": usuario.nome
         }), 200
 
     except Exception as e:
