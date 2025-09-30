@@ -82,4 +82,7 @@ def login_user():
     except Exception as e:
         db.session.rollback()
         print(f"Erro ao logar usuário: {e}")
+        print("-" * 50)
+        print(f"ERRO CRÍTICO NO LOGIN: {e}")
+        print("-" * 50)
         return jsonify({"error": "Ocorreu um erro interno no servidor."}), 500
