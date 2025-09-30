@@ -40,3 +40,42 @@ ALLOWED_ORIGINS = [
 
 if FRONTEND_API_URL:
     ALLOWED_ORIGINS.append(FRONTEND_API_URL)
+
+# Configuração do CORS
+CORS(app, resources={r"/api/*": {
+    "origins": [
+        "https://amigopet-admin-crud.onrender.com",
+        "http://localhost:5000"  # se você testar local
+    ],
+    "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    "allow_headers": ["Authorization", "Content-Type"],
+    "supports_credentials": True
+}})
+
+# 🔑 Corrige o problema do preflight (OPTIONS)
+@app.before_request
+def handle_preflight():
+    if request.method == "OPTIONS":
+        # Retorna resposta vazia com 200 e CORS headers
+        return "", 200
+
+# Associa DB
+db.init_app(app)
+
+# Blueprints
+app.register_blueprint(auth_bp, url_prefix='/api/auth')
+app.register_blueprint(produtos_bp, url_prefix='/api/produtos')
+app.register_blueprint(pedidos_bp, url_prefix='/api/pedidos')
+
+# Rota de teste
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({
+        "message": "Servidor Pet Amigo (Python/Flask) rodando!",
+        "status": "online"
+    }), 200
+
+# Inicialização
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
