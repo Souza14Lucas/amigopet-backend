@@ -1,0 +1,635 @@
+DB URI: postgresql+psycopg2://postgres:Ilovemyjesus1%40@127.0.0.1:5432/petamigo
+ * Serving Flask app 'app'
+ * Debug mode: on
+DB URI: postgresql+psycopg2://postgres:Ilovemyjesus1%40@127.0.0.1:5432/petamigo
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 8}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao solicitar pedido: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+DB URI: postgresql+psycopg2://postgres:Ilovemyjesus1%40@127.0.0.1:5432/petamigo
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro completo ao processar pedido:
+ Traceback (most recent call last):
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\routes\pedidos.py", line 40, in solicitar_pedido
+    produto = Produto.query.get(item.get('produto_id'))
+  File "<string>", line 2, in get
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        mapper,
+        ^^^^^^^
+    ...<6 lines>...
+        execution_options=self._execution_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 695, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro completo ao processar pedido:
+ Traceback (most recent call last):
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\routes\pedidos.py", line 40, in solicitar_pedido
+    produto = Produto.query.get(item.get('produto_id'))
+  File "<string>", line 2, in get
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        mapper,
+        ^^^^^^^
+    ...<6 lines>...
+        execution_options=self._execution_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 695, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+DB URI: postgresql+psycopg2://postgres:Ilovemyjesus1%40@127.0.0.1:5432/petamigo
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro completo ao processar pedido:
+ Traceback (most recent call last):
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\routes\pedidos.py", line 40, in solicitar_pedido
+    produto = Produto.query.get(item.get('produto_id'))
+  File "<string>", line 2, in get
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        mapper,
+        ^^^^^^^
+    ...<6 lines>...
+        execution_options=self._execution_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 695, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+DB URI: postgresql+psycopg2://postgres:Ilovemyjesus1%40@127.0.0.1:5432/petamigo
+DB URI: postgresql+psycopg2://postgres:Ilovemyjesus1%40@127.0.0.1:5432/petamigo
+Payload decodificado: {'exp': 1759202722, 'iat': 1759116322, 'sub': '8', 'type': 'cliente'}
+Erro ao processar pedido:
+ Traceback (most recent call last):
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\routes\pedidos.py", line 40, in solicitar_pedido
+    produto = Produto.query.get(item.get('produto_id'))
+  File "<string>", line 2, in get
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        mapper,
+        ^^^^^^^
+    ...<6 lines>...
+        execution_options=self._execution_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 695, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\souza\Desktop\Backup Fatec\FATEC SÃO PAULO\Lab de Eng Software\petamigo-backend-python\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERRO:  coluna produtos.fornecedor_id não existe
+LINE 1: ..._categoria, produtos.estoque AS produtos_estoque, produtos.f...
+                                                             ^
+
+[SQL: SELECT produtos.id AS produtos_id, produtos.nome AS produtos_nome, produtos.descricao AS produtos_descricao, produtos.preco AS produtos_preco, produtos.categoria AS produtos_categoria, produtos.estoque AS produtos_estoque, produtos.fornecedor_id AS produtos_fornecedor_id 
+FROM produtos 
+WHERE produtos.id = %(pk_1)s]
+[parameters: {'pk_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
