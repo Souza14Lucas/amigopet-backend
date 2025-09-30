@@ -29,23 +29,25 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY') 
 
 # NOVO: Adiciona a URL do Frontend Admin (Static Site) para permissão CORS
-# Garantimos que, se a variável estiver vazia, ele use o curinga '*'.
-FRONTEND_ADMIN_URL = os.getenv('FRONTEND_ADMIN_URL', '*')
-FRONTEND_API_URL = os.getenv('RENDER_EXTERNAL_URL') # URL da própria API no Render (pode ser útil)
+FRONTEND_ADMIN_URL = os.getenv('FRONTEND_ADMIN_URL', 'https://amigopet-admin-crud.onrender.com')
+FRONTEND_API_URL = os.getenv('RENDER_EXTERNAL_URL') 
 
-# Lista de origens permitidas
-ALLOWED_ORIGINS = ["http://localhost:5000", "http://127.0.0.1:5000", FRONTEND_ADMIN_URL]
+# Lista final de origens permitidas
+ALLOWED_ORIGINS = [
+    "http://localhost:3000",   # React local
+    "http://127.0.0.1:3000",   # React local alternativa
+    FRONTEND_ADMIN_URL
+]
 
-# Adiciona a URL do próprio Render (se estiver configurada)
 if FRONTEND_API_URL:
     ALLOWED_ORIGINS.append(FRONTEND_API_URL)
 
+print("ALLOWED_ORIGINS:", ALLOWED_ORIGINS)
 
-# Configuração do CORS: Permite requisições de origens específicas, MÉTODOS e HEADERS
 CORS(app, resources={r"/api/*": {
     "origins": ALLOWED_ORIGINS,
-    "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"], # Permite todos os métodos de CRUD
-    "allow_headers": ["Authorization", "Content-Type"],   # Permite os headers de Token e JSON
+    "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    "allow_headers": ["Authorization", "Content-Type"],
     "supports_credentials": True
 }})
 
