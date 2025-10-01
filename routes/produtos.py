@@ -113,6 +113,9 @@ def update_produto(current_user, produto_id):
     data = request.get_json()
     produto.nome = data.get('nome', produto.nome)
     produto.preco = data.get('preco', produto.preco)
+    produto.estoque = data.get('estoque', produto.estoque)
+    produto.categoria = data.get('categoria', produto.categoria)
+    produto.descricao = data.get('descricao', produto.descricao)
     produto.imagem_url = data.get('imagem_url', produto.imagem_url)
 
     db.session.commit()
