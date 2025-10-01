@@ -17,10 +17,10 @@ class Produto(db.Model):
     descricao = db.Column(db.Text)
     categoria = db.Column(db.String(50))
     estoque = db.Column(db.Integer, default=0)
-
+    imagem_url = db.Column(db.String(255), default="https://res.cloudinary.com/demo/image/upload/v1690000000/default-product.png")
 
     def to_dict(self):
-        return {"id": self.id, "nome": self.nome, "preco": self.preco, "descricao": self.descricao, "categoria": self.categoria, "estoque": self.estoque}
+        return {"id": self.id, "nome": self.nome, "preco": self.preco, "descricao": self.descricao, "categoria": self.categoria, "estoque": self.estoque, "imagem_url": self.imagem_url}
 
 # ---------------------------
 # Criar produto (apenas admin)
@@ -48,6 +48,7 @@ def create_produto(current_user):
             preco=preco,
             categoria=categoria,
             estoque=estoque,
+            imagem_url=data.get("imagem_url"),
         )
         db.session.add(novo_produto)
         db.session.commit()
@@ -112,6 +113,7 @@ def update_produto(current_user, produto_id):
     data = request.get_json()
     produto.nome = data.get('nome', produto.nome)
     produto.preco = data.get('preco', produto.preco)
+    produto.imagem_url = data.get('imagem_url', produto.imagem_url)
 
     db.session.commit()
     return jsonify({"message": "Produto atualizado com sucesso!", "produto": produto.to_dict()}), 200
