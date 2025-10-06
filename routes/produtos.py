@@ -18,9 +18,10 @@ class Produto(db.Model):
     categoria = db.Column(db.String(50))
     estoque = db.Column(db.Integer, default=0)
     imagem_url = db.Column(db.String(255), default="https://res.cloudinary.com/demo/image/upload/v1690000000/default-product.png")
+    especie = db.Column(db.String(50), nullable=False, default='Geral')
 
     def to_dict(self):
-        return {"id": self.id, "nome": self.nome, "preco": self.preco, "descricao": self.descricao, "categoria": self.categoria, "estoque": self.estoque, "imagem_url": self.imagem_url}
+        return {"id": self.id, "nome": self.nome, "preco": self.preco, "descricao": self.descricao, "categoria": self.categoria, "estoque": self.estoque, "imagem_url": self.imagem_url, "especie": self.especie}
 
 # ---------------------------
 # Criar produto (apenas admin)
@@ -37,6 +38,7 @@ def create_produto(current_user):
     preco = data.get('preco')
     categoria = data.get('categoria')
     estoque = data.get('estoque', 0)
+    especie = data.get('especie')
 
     if not all([nome, preco]):
         return jsonify({"message": "Campos 'nome' e 'preco' são obrigatórios."}), 400
@@ -49,6 +51,7 @@ def create_produto(current_user):
             categoria=categoria,
             estoque=estoque,
             imagem_url=data.get("imagem_url"),
+            especie=especie,
         )
         db.session.add(novo_produto)
         db.session.commit()
@@ -117,6 +120,7 @@ def update_produto(current_user, produto_id):
     produto.categoria = data.get('categoria', produto.categoria)
     produto.descricao = data.get('descricao', produto.descricao)
     produto.imagem_url = data.get('imagem_url', produto.imagem_url)
+    produto.especie = data.get('especie', produto.especie)
 
     db.session.commit()
     return jsonify({"message": "Produto atualizado com sucesso!", "produto": produto.to_dict()}), 200

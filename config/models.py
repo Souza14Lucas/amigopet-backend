@@ -29,6 +29,7 @@ class Produto(db.Model):
     categoria = db.Column(db.String(50))
     estoque = db.Column(db.Integer, default=0)
     imagem_url = db.Column(db.String(255), default="https://res.cloudinary.com/demo/image/upload/v1690000000/default-product.png")
+    especie = db.Column(db.String(50), nullable=False, default='Geral')
 
     def to_dict(self):
         return {
@@ -39,7 +40,8 @@ class Produto(db.Model):
             "descricao": self.descricao,
             "estoque": self.estoque,
             "categoria": self.categoria,
-            "imagem_url": self.imagem_url
+            "imagem_url": self.imagem_url,
+            "especie": self.especie
         }
 
 class PedidoCompra(db.Model):
