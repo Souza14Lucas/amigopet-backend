@@ -6,9 +6,9 @@ from flask_cors import CORS
 # Importa a lógica de conexão com o DB
 from config.extensions import db 
 
-from routes.auth import auth_bp 
-from routes.produtos import produtos_bp
-from routes.pedidos import pedidos_bp
+from routes.auth_routes import auth_bp 
+from routes.produtos_route import produtos_bp
+from routes.pedidos_routes import pedidos_bp
 
 # 1. Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
