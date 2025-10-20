@@ -1,0 +1,560 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Pet Amigo",
+    "description": "Documentação para o backend de gestão de produtos, pedidos e autenticação/usuários.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://virtserver.swaggerhub.com/lucasdesouza-9bf/AmigoPet/1.0.0",
+      "description": "SwaggerHub API Auto Mocking"
+    },
+    {
+      "url": "https://amigopet-backend.onrender.com",
+      "description": "Servidor de Produção (Render)"
+    },
+    {
+      "url": "http://127.0.0.1:5000/api",
+      "description": "Servidor Local (Para testes)"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Autenticação",
+      "description": "Cadastro e Login de Usuários (Clientes e Admin)"
+    },
+    {
+      "name": "Produtos",
+      "description": "CRUD de Produtos do Pet Shop"
+    },
+    {
+      "name": "Pedidos",
+      "description": "Solicitação e Busca de Pedidos de Compra"
+    }
+  ],
+  "paths": {
+    "/auth/registro": {
+      "post": {
+        "tags": [
+          "Autenticação"
+        ],
+        "summary": "Registro de novo usuário (Cliente ou Admin)",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/auth_registro_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Usuário registrado com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_201"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Campos obrigatórios faltando"
+          },
+          "409": {
+            "description": "Email já cadastrado"
+          },
+          "500": {
+            "description": "Erro interno no servidor"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "Autenticação"
+        ],
+        "summary": "Login de usuário",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/auth_login_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Login bem-sucedido. Retorna o token JWT.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                },
+                "example": {
+                  "message": "Login realizado com sucesso!",
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                  "tipo": "admin",
+                  "user_id": 1
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Credenciais inválidas."
+          }
+        }
+      }
+    },
+    "/produtos": {
+      "get": {
+        "tags": [
+          "Produtos"
+        ],
+        "summary": "Lista todos os produtos disponíveis",
+        "responses": {
+          "200": {
+            "description": "Lista de produtos com estoque positivo.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Produto"
+                  }
+                },
+                "example": [
+                  {
+                    "id": 1,
+                    "nome": "Ração Premium para Gatos",
+                    "preco": 89.9,
+                    "estoque": 30,
+                    "descricao": "Ração completa e balanceada para gatos adultos.",
+                    "categoria": "Alimentação",
+                    "imagem_url": "https://res.cloudinary.com/demo/image/upload/racao-gato.jpg"
+                  },
+                  {
+                    "id": 2,
+                    "nome": "Coleira Anti-Pulgas",
+                    "preco": 39.99,
+                    "estoque": 12,
+                    "descricao": "Protege cães e gatos contra pulgas e carrapatos por até 8 meses.",
+                    "categoria": "Acessórios",
+                    "imagem_url": "https://res.cloudinary.com/demo/image/upload/coleira.jpg"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Produtos"
+        ],
+        "summary": "Cria um novo produto (Apenas Admin)",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutoInput"
+              },
+              "example": {
+                "nome": "Brinquedo Bola para Cães",
+                "preco": 19.99,
+                "estoque": 25,
+                "descricao": "Brinquedo resistente e divertido para cães de pequeno porte.",
+                "categoria": "Brinquedos",
+                "imagem_url": "https://res.cloudinary.com/demo/image/upload/bola-caes.jpg"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Produto criado com sucesso.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Produto 'Brinquedo Bola para Cães' criado com sucesso por admin@petamigo.com",
+                  "produto_id": 25
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inválidos."
+          },
+          "403": {
+            "description": "Acesso negado (Token de Admin requerido)."
+          },
+          "500": {
+            "description": "Erro interno do servidor."
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/produtos/{id}": {
+      "get": {
+        "tags": [
+          "Produtos"
+        ],
+        "summary": "Busca um produto específico por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Detalhes do produto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Produto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Produto não encontrado"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Produtos"
+        ],
+        "summary": "Atualiza um produto (Admin)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutoInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Produto atualizado com sucesso"
+          },
+          "403": {
+            "description": "Acesso negado (Não é Admin ou token inválido)"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Produtos"
+        ],
+        "summary": "Deleta um produto (Admin)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Produto deletado com sucesso"
+          },
+          "403": {
+            "description": "Acesso negado (Não é Admin ou token inválido)"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/pedidos": {
+      "get": {
+        "tags": [
+          "Pedidos"
+        ],
+        "summary": "Busca lista de pedidos (Admin: todos; Clientes: próprios)",
+        "responses": {
+          "200": {
+            "description": "Lista de pedidos retornada com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pedido"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado (Token faltando ou inválido)"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Pedidos"
+        ],
+        "summary": "Cria um novo pedido de compra",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovoPedidoInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Pedido criado com sucesso."
+          },
+          "400": {
+            "description": "Dados inválidos ou estoque insuficiente."
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Produto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "estoque": {
+            "type": "integer"
+          },
+          "especie": {
+            "type": "string"
+          },
+          "imagem_url": {
+            "type": "string",
+            "description": "URL pública da imagem do produto (Cloudinary)"
+          }
+        }
+      },
+      "ProdutoInput": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "estoque": {
+            "type": "integer"
+          },
+          "descricao": {
+            "type": "string"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "especie": {
+            "type": "string"
+          },
+          "imagem_url": {
+            "type": "string"
+          }
+        }
+      },
+      "NovoPedidoInput": {
+        "required": [
+          "endereco",
+          "itens"
+        ],
+        "type": "object",
+        "properties": {
+          "itens": {
+            "type": "array",
+            "description": "Lista de itens a serem comprados.",
+            "items": {
+              "$ref": "#/components/schemas/NovoPedidoInput_itens"
+            }
+          },
+          "endereco": {
+            "type": "string",
+            "description": "Endereço para entrega do pedido."
+          }
+        }
+      },
+      "Pedido": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "cliente_id": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pendente",
+              "processando",
+              "concluido"
+            ]
+          },
+          "valor_total": {
+            "type": "number"
+          },
+          "data_pedido": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "auth_registro_body": {
+        "required": [
+          "email",
+          "nome",
+          "senha"
+        ],
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "example": "João da Silva"
+          },
+          "email": {
+            "type": "string",
+            "example": "cliente@exemplo.com"
+          },
+          "senha": {
+            "type": "string",
+            "format": "password",
+            "example": "senha123"
+          },
+          "tipo": {
+            "type": "string",
+            "default": "cliente",
+            "enum": [
+              "cliente",
+              "admin"
+            ]
+          }
+        }
+      },
+      "inline_response_201": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "integer"
+          }
+        }
+      },
+      "auth_login_body": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "example": "admin@petamigo.com"
+          },
+          "senha": {
+            "type": "string",
+            "format": "password",
+            "example": "admin123"
+          }
+        }
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        }
+      },
+      "NovoPedidoInput_itens": {
+        "type": "object",
+        "properties": {
+          "produto_id": {
+            "type": "integer"
+          },
+          "quantidade": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "description": "Requer Token JWT de Admin ou Cliente",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
