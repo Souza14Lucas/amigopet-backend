@@ -7,7 +7,7 @@ from flask import request, jsonify
 from functools import wraps
 
 load_dotenv()
-SECRET_KEY = os.getenv('SECRET_KEY')  # Certifique-se que não há aspas ou espaços
+SECRET_KEY = os.getenv('SECRET_KEY') 
 
 # --- 1. Criptografia de senha ---
 def hash_password(password):
@@ -37,7 +37,6 @@ def decode_jwt_token(token):
     except jwt.InvalidTokenError:
         return {'error': 'Token inválido'}
 
-# --- 3. Middleware ---
 def token_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):

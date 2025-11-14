@@ -8,36 +8,27 @@ from controllers.produtos_controller import ProdutoController
 produtos_bp = Blueprint('produtos', __name__)
 controller = ProdutoController()
 
-# ---------------------------
-# Criar produto (apenas admin)
-# ---------------------------
-@produtos_bp.route('/', methods=['POST'])
+# só admin
+@produtos_bp.route('/criar-produto', methods=['POST'])
 @token_required
 def criar_produto(current_user):
     data = request.get_json()
     response, status = controller.criar_produto(data, current_user)
     return jsonify(response), status
 
-# ---------------------------
-# Listar produtos
-# ---------------------------
-@produtos_bp.route('/', methods=['GET'])
+
+@produtos_bp.route('/listar-produtos', methods=['GET'])
 def listar_produtos():
     response, status = controller.listar_produtos()
     return jsonify(response), status
 
 
-# ---------------------------
-# Consultar produto por ID
-# ---------------------------
 @produtos_bp.route('/<int:produto_id>', methods=['GET'])
 def buscar_produto(produto_id):
     response, status = controller.buscar_produto_por_id(produto_id)
     return jsonify(response), status
 
-# ---------------------------
-# Atualizar produto (apenas admin)
-# ---------------------------
+# só admin
 @produtos_bp.route('/<int:produto_id>', methods=['PUT'])
 @token_required
 def atualizar_produto(current_user, produto_id):
@@ -45,9 +36,7 @@ def atualizar_produto(current_user, produto_id):
     response, status = controller.atualizar_produto(produto_id, data, current_user)
     return jsonify(response), status
 
-# ---------------------------
-# Deletar produto (apenas admin)
-# ---------------------------
+# só admin
 @produtos_bp.route('/<int:produto_id>', methods=['DELETE'])
 @token_required
 def deletar_produto(current_user, produto_id):

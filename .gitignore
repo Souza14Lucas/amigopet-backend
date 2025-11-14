@@ -1,0 +1,10 @@
+# Ambiente virtual
+venv/
+amigopet_venv/
+
+# Variáveis secretas
+.env
+
+# Cache do Python
+__pycache__/
+*.pyc

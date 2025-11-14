@@ -1,4 +1,3 @@
-# services/auth_service.py
 from config.extensions import db
 from models.usuario import Usuario
 from utils.security import hash_password, create_jwt_token, check_password
@@ -31,7 +30,7 @@ class AuthService:
             token = create_jwt_token(novo_usuario.id, novo_usuario.tipo)
             return {
                 "message": "Usuário registrado com sucesso!",
-                "token": token,
+                "token": token, 
                 "user_id": novo_usuario.id,
                 "user_type": novo_usuario.tipo
             }

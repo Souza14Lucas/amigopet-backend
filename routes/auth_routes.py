@@ -1,12 +1,8 @@
-# routes/auth.py
 from flask import Blueprint, request
 from controllers.auth_controller import registrar_usuario, login_usuario
 
 auth_bp = Blueprint('auth', __name__)
 
-# ---------------------------
-# Rotas de Autenticação
-# ---------------------------
 
 @auth_bp.route('/registro', methods=['POST'])
 def register_user():

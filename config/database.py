@@ -1,9 +1,7 @@
-# config/database.py
 import psycopg2
 import os
 from dotenv import load_dotenv
 
-# Garantimos que as variáveis de ambiente sejam carregadas aqui também
 load_dotenv() 
 
 def get_db_connection():
@@ -18,8 +16,7 @@ def get_db_connection():
         )
         return conn
     except psycopg2.Error as e:
-        # Imprime o erro caso haja falha na conexão (útil para debug)
-        print(f"❌ Erro ao conectar ao PostgreSQL. Detalhes: {e}", flush=True)
+        print(f"Erro ao conectar ao PostgreSQL. Detalhes: {e}", flush=True)
         return None
 
 def close_db_connection(conn):
