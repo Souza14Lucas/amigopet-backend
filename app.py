@@ -6,6 +6,7 @@ from config.extensions import db
 from routes.auth_routes import auth_bp 
 from routes.produtos_route import produtos_bp
 from routes.pedidos_routes import pedidos_bp
+from sql.init_db import create_tables, seed_data
 
 load_dotenv()
 app = Flask(__name__)
@@ -66,5 +67,7 @@ def index():
     }), 200
 
 if __name__ == '__main__':
+    create_tables()
+    seed_data()
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)

@@ -10,6 +10,5 @@ class Usuario(db.Model):
     tipo = db.Column(db.String(20), default='cliente') # 'cliente' ou 'admin'
     created_at = db.Column(db.DateTime, default=text('CURRENT_TIMESTAMP'))
     
-    # Adicione este método se quiser usar o ORM para buscar o usuário
     def to_dict(self):
         return {"id": self.id, "email": self.email, "tipo": self.tipo, "nome": self.nome}

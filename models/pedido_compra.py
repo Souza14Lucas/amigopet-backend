@@ -10,7 +10,6 @@ class PedidoCompra(db.Model):
     valor_total = db.Column(db.Numeric(10, 2), nullable=False)
     endereco_entrega = db.Column(db.Text)
     
-    # Relação para buscar os itens deste pedido
     itens = db.relationship('ItemPedido', backref='pedido', lazy='dynamic') 
 
     def to_dict(self):
