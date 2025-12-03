@@ -29,6 +29,7 @@ FRONTEND_API_URL = os.getenv('RENDER_EXTERNAL_URL')
 ALLOWED_ORIGINS = [
     "http://localhost:5000",
     "http://127.0.0.1:5000",
+    "http://127.0.0.1:3000",
     FRONTEND_ADMIN_URL
 ]
 
@@ -39,7 +40,8 @@ if FRONTEND_API_URL:
 CORS(app, resources={r"/api/*": {
     "origins": [
         "https://amigopet-admin-crud.onrender.com",
-        "http://localhost:5000"
+        "http://localhost:5000",
+        "http://localhost:3000",
     ],
     "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     "allow_headers": ["Authorization", "Content-Type"],

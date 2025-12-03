@@ -17,6 +17,7 @@ class PedidoService:
             return {"error": "Itens e endereço são obrigatórios."}, 400
 
         pedido = PedidoCompra(cliente_id=cliente_id, endereco_entrega=endereco_entrega, valor_total=0)
+
         db.session.add(pedido)
         db.session.flush()
 
@@ -24,10 +25,9 @@ class PedidoService:
         itens_para_adicionar = []
 
         for item in itens:
-            produto = Produto.query.get(item.get('produto_id'))
-            quantidade = item.get('quantidade')
-
-            if not produto or produto.estoque < quantidade:
+            produto = Produto.query.get(item.get('id'))
+            quantidade = item.get('quantity')
+            if not produto or produto.estoque < int(quantidade):
                 db.session.rollback()
                 return {"error": "Estoque insuficiente ou produto não encontrado."}, 400
 

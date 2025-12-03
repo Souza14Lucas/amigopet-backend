@@ -28,9 +28,9 @@ class PedidoRepository:
                 "pedido_id": pedido.id,
                 "cliente_id": pedido.cliente_id,
                 "data_pedido": pedido.data_pedido.isoformat(),
-                "status": pedido.status,
+                "status": str(pedido.status),  # <<< AQUI!
                 "valor_total": f"{pedido.valor_total:.2f}",
                 "itens_count": pedido.itens.count(),
                 "itens": itens_detalhes
-            })
+            });
         return pedidos_detalhados
