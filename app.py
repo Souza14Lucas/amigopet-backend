@@ -6,6 +6,7 @@ from config.extensions import db
 from routes.auth_routes import auth_bp 
 from routes.produtos_route import produtos_bp
 from routes.pedidos_routes import pedidos_bp
+from sql.init_db import create_tables, seed_data
 
 load_dotenv()
 app = Flask(__name__)
@@ -27,7 +28,6 @@ FRONTEND_API_URL = os.getenv('RENDER_EXTERNAL_URL')
 
 ALLOWED_ORIGINS = [
     "http://localhost:5000",
-    "http://localhost:3000",
     "http://127.0.0.1:5000",
     FRONTEND_ADMIN_URL
 ]
@@ -39,8 +39,7 @@ if FRONTEND_API_URL:
 CORS(app, resources={r"/api/*": {
     "origins": [
         "https://amigopet-admin-crud.onrender.com",
-        "http://localhost:5000",
-        "http://localhost:3000",
+        "http://localhost:5000"
     ],
     "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     "allow_headers": ["Authorization", "Content-Type"],
@@ -68,5 +67,7 @@ def index():
     }), 200
 
 if __name__ == '__main__':
+    create_tables()
+    seed_data()
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
