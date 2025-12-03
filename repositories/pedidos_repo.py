@@ -20,6 +20,7 @@ class PedidoRepository:
                 itens_detalhes.append({
                     "produto_id": item.produto_id,
                     "nome_produto": produto.nome if produto else "Produto não encontrado",
+                    "imagem_produto": produto.imagem_url if produto else "",
                     "quantidade": item.quantidade,
                     "preco_unitario": f"{item.preco_unitario:.2f}",
                     "subtotal": f"{item.preco_unitario * item.quantidade:.2f}"
