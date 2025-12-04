@@ -30,6 +30,8 @@ ALLOWED_ORIGINS = [
     "http://localhost:5000",
     "http://127.0.0.1:5000",
     "http://127.0.0.1:3000",
+    "https://amigopet.giize.com",
+    "https://petamigo.vercel.app",
     FRONTEND_ADMIN_URL
 ]
 
@@ -42,6 +44,8 @@ CORS(app, resources={r"/api/*": {
         "https://amigopet-admin-crud.onrender.com",
         "http://localhost:5000",
         "http://localhost:3000",
+        "https://petamigo.vercel.app",
+        "https://amigopet.giize.com"
     ],
     "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     "allow_headers": ["Authorization", "Content-Type"],
